@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>NexTune • Privacy Policy</title>
+  
+  <!-- Preload critical fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Meta tags for better mobile experience -->
+  <meta name="theme-color" content="#0a0a14">
+  <meta name="description" content="NexTune Privacy Policy - Your data protection and privacy rights">
+  
+  <style>
+    :root {
+      /* Enhanced color system */
+      --bg-primary: #0a0a14;
+      --bg-secondary: #1a1a2e;
+      --bg-tertiary: #16213e;
+      
+      /* Premium gradients */
+      --grad-hero: linear-gradient(135deg, #1e1b4b 0%, #312e81 20%, #1e293b 40%, #164e63 60%, #0f172a 80%, #020617 100%);
+      --grad-accent: linear-gradient(45deg, #8b5cf6, #a78bfa, #c4b5fd);
+      --grad-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+      
+      /* Glass morphism */
+      --glass-bg: rgba(255, 255, 255, 0.08);
+      --glass-border: rgba(255, 255, 255, 0.12);
+      --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      
+      /* Typography */
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --text-accent: #a78bfa;
+      
+      /* Spacing and sizing */
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      
+      /* Transitions */
+      --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      
+      /* Shadows */
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.15);
+      --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.2);
+      --shadow-xl: 0 32px 64px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Reset and base styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Enhanced hero section */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      overflow: hidden;
+      background: var(--bg-primary);
+    }
+
+    /* Animated background layers */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -50%;
+      background: var(--grad-hero);
+      background-size: 400% 400%;
+      animation: gradientFlow 20s ease-in-out infinite;
+      opacity: 0.7;
+      filter: blur(80px);
+      z-index: 1;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background: radial-gradient(circle at 30% 70%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 30%, rgba(167, 139, 250, 0.2) 0%, transparent 50%);
+      animation: gradientFlow 25s ease-in-out infinite reverse;
+      opacity: 0.6;
+      filter: blur(60px);
+      z-index: 2;
+    }
+
+    @keyframes gradientFlow {
+      0%, 100% { background-position: 0% 50%; }
+      25% { background-position: 100% 0%; }
+      50% { background-position: 100% 100%; }
+      75% { background-position: 0% 100%; }
+    }
+
+    /* Enhanced particle system */
+    .particles {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(148, 163, 184, 0.6) 0%, rgba(148, 163, 184, 0.1) 70%, transparent 100%);
+      animation: particleFloat 12s ease-in-out infinite;
+    }
+
+    .particle:nth-child(1) { width: 6px; height: 6px; left: 15%; top: 20%; animation-delay: 0s; animation-duration: 15s; }
+    .particle:nth-child(2) { width: 4px; height: 4px; left: 85%; top: 25%; animation-delay: 3s; animation-duration: 12s; }
+    .particle:nth-child(3) { width: 8px; height: 8px; left: 65%; top: 75%; animation-delay: 6s; animation-duration: 18s; }
+    .particle:nth-child(4) { width: 5px; height: 5px; left: 25%; top: 80%; animation-delay: 9s; animation-duration: 14s; }
+    .particle:nth-child(5) { width: 7px; height: 7px; left: 75%; top: 15%; animation-delay: 12s; animation-duration: 16s; }
+    .particle:nth-child(6) { width: 3px; height: 3px; left: 10%; top: 60%; animation-delay: 4s; animation-duration: 11s; }
+    .particle:nth-child(7) { width: 6px; height: 6px; left: 90%; top: 65%; animation-delay: 7s; animation-duration: 13s; }
+    .particle:nth-child(8) { width: 4px; height: 4px; left: 45%; top: 10%; animation-delay: 10s; animation-duration: 17s; }
+
+    @keyframes particleFloat {
+      0%, 100% { 
+        transform: translateY(0px) translateX(0px) rotate(0deg); 
+        opacity: 0.3; 
+      }
+      25% { 
+        transform: translateY(-40px) translateX(20px) rotate(90deg); 
+        opacity: 0.7; 
+      }
+      50% { 
+        transform: translateY(-20px) translateX(-15px) rotate(180deg); 
+        opacity: 0.4; 
+      }
+      75% { 
+        transform: translateY(-60px) translateX(10px) rotate(270deg); 
+        opacity: 0.6; 
+      }
+    }
+
+    /* Enhanced geometric shapes */
+    .shapes {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .shape {
+      position: absolute;
+      border: 1px solid rgba(167, 139, 250, 0.2);
+      animation: shapeRotate 30s linear infinite;
+    }
+
+    .shape.circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      top: 10%;
+      right: 8%;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+    }
+
+    .shape.square {
+      width: 100px;
+      height: 100px;
+      bottom: 15%;
+      left: 12%;
+      border-radius: var(--radius-sm);
+      animation-direction: reverse;
+      animation-duration: 40s;
+      background: linear-gradient(45deg, rgba(167, 139, 250, 0.05) 0%, transparent 50%);
+    }
+
+    .shape.triangle {
+      width: 0;
+      height: 0;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-bottom: 70px solid rgba(196, 181, 253, 0.1);
+      top: 35%;
+      right: 20%;
+      animation-duration: 45s;
+      filter: blur(0.5px);
+    }
+
+    .shape.hexagon {
+      width: 80px;
+      height: 80px;
+      background: rgba(139, 92, 246, 0.08);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      top: 60%;
+      left: 80%;
+      animation-duration: 35s;
+      animation-direction: reverse;
+    }
+
+    @keyframes shapeRotate {
+      from { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.1); }
+      to { transform: rotate(360deg) scale(1); }
+    }
+
+    /* Hero content */
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      max-width: 700px;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      background: white;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 60px rgba(148, 163, 184, 0.3);
+    }
+
+    @keyframes titleGlow {
+      0% { filter: drop-shadow(0 0 20px rgba(167, 139, 250, 0.3)); }
+      100% { filter: drop-shadow(0 0 40px rgba(167, 139, 250, 0.6)); }
+    }
+
+    @keyframes titleSlide {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 400;
+      color: var(--text-secondary);
+      margin-bottom: 2.5rem;
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+
+    .date-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px) saturate(180%);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--glass-border);
+      display: inline-block;
+      animation: fadeInUp 1s ease-out 0.6s both;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-smooth);
+    }
+
+    .date-badge:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(167, 139, 250, 0.3);
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Enhanced main content */
+    .main-container {
+      position: relative;
+      z-index: 5;
+      padding: 0 1rem;
+      margin-top: -8rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--glass-bg);
+      backdrop-filter: blur(24px) saturate(180%);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      box-shadow: var(--shadow-xl);
+      position: relative;
+      overflow: hidden;
+    }
+
+    main::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--grad-accent);
+      opacity: 0.6;
+    }
+
+    /* Enhanced sections */
+    section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all var(--transition-slow);
+      margin-bottom: 3rem;
+      padding: 1.5rem 0;
+      border-radius: var(--radius-md);
+    }
+
+    section.reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section:hover {
+      background: rgba(255, 255, 255, 0.02);
+      transform: translateY(-2px);
+    }
+
+    /* Enhanced typography */
+    h2 {
+      font-size: clamp(1.4rem, 4vw, 1.8rem);
+      font-weight: 700;
+      color: var(--text-accent);
+      margin-bottom: 1.2rem;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 60%;
+      background: var(--grad-accent);
+      border-radius: 2px;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 1rem;
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--text-accent), transparent);
+      border-radius: 1px;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 1.5rem 0 0.8rem;
+      padding-left: 0.5rem;
+    }
+
+    p {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* Enhanced lists */
+    ul {
+      margin: 1rem 0;
+      padding-left: 2rem;
+    }
+
+    li {
+      color: var(--text-secondary);
+      margin-bottom: 0.8rem;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    li::marker {
+      color: var(--text-accent);
+    }
+
+    /* Enhanced footer */
+    footer {
+      text-align: center;
+      padding: 4rem 2rem 3rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      background: linear-gradient(180deg, transparent 0%, rgba(10, 10, 20, 0.8) 100%);
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: rgba(167, 139, 250, 0.2);
+      z-index: 1000;
+    }
+
+    .scroll-progress {
+      height: 100%;
+      background: var(--grad-accent);
+      width: 0%;
+      transition: width 0.1s ease;
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 80vh;
+        padding: 1rem;
+      }
+      
+      .shape.circle, .shape.hexagon {
+        display: none;
+      }
+      
+      .shape.square {
+        width: 60px;
+        height: 60px;
+      }
+      
+      .hero-content {
+        padding: 1rem;
+      }
+      
+      .main-container {
+        margin-top: -4rem;
+        padding: 0 0.5rem;
+      }
+      
+      main {
+        padding: 2rem 1.5rem;
+        border-radius: var(--radius-md);
+      }
+      
+      section {
+        margin-bottom: 2rem;
+        padding: 1rem 0;
+      }
+      
+      h2 {
+        font-size: 1.4rem;
+      }
+      
+      .particle:nth-child(n+5) {
+        display: none;
+      }
+    }
+
+    /* Touch device optimizations */
+    @media (hover: none) and (pointer: coarse) {
+      .date-badge:hover,
+      section:hover {
+        transform: none;
+      }
+      
+      .date-badge:active {
+        transform: scale(0.98);
+      }
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+      :root {
+        --text-primary: #ffffff;
+        --text-secondary: #e2e8f0;
+        --text-muted: #cbd5e1;
+        --glass-border: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      
+      .hero::before,
+      .hero::after {
+        animation: none;
+      }
+      
+      .particle,
+      .shape {
+        animation: none;
+      }
+    }
+
+    /* Loading animation */
+    .loading {
+      opacity: 0;
+      animation: fadeIn 0.6s ease-out 0.1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body class="loading">
+  <!-- Scroll progress indicator -->
+  <div class="scroll-indicator">
+    <div class="scroll-progress"></div>
+  </div>
+
+  <!-- Enhanced hero section -->
+  <header class="hero">
+    <!-- Particle system -->
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
+    <!-- Geometric shapes -->
+    <div class="shapes">
+      <div class="shape circle"></div>
+      <div class="shape square"></div>
+      <div class="shape triangle"></div>
+      <div class="shape hexagon"></div>
+    </div>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+      <h1>Privacy Policy</h1>
+      <p class="hero-subtitle">Your data protection & privacy rights</p>
+      <div class="date-badge">Effective August 19, 2025</div>
+    </div>
+  </header>
+
+  <!-- Main content container -->
+  <div class="main-container">
+    <main>
+      <section id="introduction">
+        <h2>1. Introduction</h2>
+        <p>Welcome to <strong>NexTune</strong> ("we", "our", or "us"). We're dedicated to protecting your privacy and handling your data responsibly. This Privacy Policy explains how we collect, use, and protect your information when you use our music platform.</p>
+      </section>
+
+      <section id="information-we-collect">
+        <h2>2. Information We Collect</h2>
+        <h3>a. Personal Information</h3>
+        <ul>
+          <li>Your name, email address, or contact details when creating an account.</li>
+        </ul>
+        <h3>b. Usage Data</h3>
+        <ul>
+          <li>Details of your activity including songs played, playlists, and preferences.</li>
+          <li>Cached data shared with NexTune AI to improve your experience in future updates.</li>
+        </ul>
+      </section>
+
+      <section id="how-we-use">
+        <h2>3. How We Use Your Information</h2>
+        <ul>
+          <li>Deliver and optimize our music services.</li>
+          <li>Personalize content and recommend music.</li>
+          <li>Send updates, offers, and customer-support messages.</li>
+          <li>Enhance our systems through analytics and AI learning.</li>
+        </ul>
+      </section>
+
+      <section id="sharing">
+        <h2>4. Sharing Your Information</h2>
+        <p>We don't sell your data. We may share cached usage data with <strong>7island's [ NexTune ]</strong> to enhance your experience through future updates.</p>
+      </section>
+
+      <section id="data-security">
+        <h2>5. Data Security</h2>
+        <p>We use modern security practices to keep your information safe. While no system is completely secure, we work hard to protect your data from breaches or misuse.</p>
+      </section>
+
+      <section id="changes">
+        <h2>6. Changes to This Privacy Policy</h2>
+        <p>This Privacy Policy may change over time. We'll notify users of significant updates in-app. The Effective Date will always reflect the latest version.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    © 2025 NexTune. All rights reserved.
+  </footer>
+
+  <script>
+    // Enhanced intersection observer for section reveals
+    const sections = document.querySelectorAll('section');
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+          sectionObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => sectionObserver.observe(section));
+
+    // Enhanced parallax scrolling
+    let ticking = false;
+    
+    function updateParallax() {
+      const scrolled = window.pageYOffset;
+      const hero = document.querySelector('.hero');
+      const particles = document.querySelectorAll('.particle');
+      const shapes = document.querySelectorAll('.shape');
+      
+      if (hero) {
+        hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+      }
+      
+      // Parallax particles
+      particles.forEach((particle, index) => {
+        const speed = 0.1 + (index * 0.05);
+        particle.style.transform += ` translateY(${scrolled * speed}px)`;
+      });
+      
+      // Parallax shapes
+      shapes.forEach((shape, index) => {
+        const speed = 0.05 + (index * 0.02);
+        shape.style.transform += ` translateY(${scrolled * speed}px)`;
+      });
+      
+      ticking = false;
+    }
+
+    function requestParallaxUpdate() {
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }
+
+    // Scroll progress indicator
+    function updateScrollProgress() {
+      const scrollProgress = document.querySelector('.scroll-progress');
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      
+      if (scrollProgress) {
+        scrollProgress.style.width = scrollPercent + '%';
+      }
+    }
+
+    // Optimized scroll handler
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+      requestParallaxUpdate();
+      updateScrollProgress();
+      
+      // Clear existing timeout
+      clearTimeout(scrollTimeout);
+      
+      // Set new timeout for scroll end
+      scrollTimeout = setTimeout(() => {
+        document.body.classList.remove('scrolling');
+      }, 150);
+      
+      document.body.classList.add('scrolling');
+    }, { passive: true });
+
+    // Touch device optimizations
+    if ('ontouchstart' in window) {
+      document.body.classList.add('touch-device');
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Performance optimization: Reduce animations on low-end devices
+    if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) {
+      document.documentElement.style.setProperty('--transition-slow', '0.3s ease');
+      document.documentElement.style.setProperty('--transition-smooth', '0.2s ease');
+    }
+
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', () => {
+      // Remove loading class
+      document.body.classList.remove('loading');
+      
+      // Initialize scroll progress
+      updateScrollProgress();
+      
+      // Add loaded class for additional animations
+      setTimeout(() => {
+        document.body.classList.add('loaded');
+      }, 500);
+    });
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+     
+        document.body.classList.add('paused');
+      } else {
+
+        document.body.classList.remove('paused');
+      }
+    });
+  </script>
+</body>
+</html>
